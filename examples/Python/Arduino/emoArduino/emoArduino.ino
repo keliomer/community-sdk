@@ -116,7 +116,7 @@ void parseData() {
 
   char * strtokIndx; // this is used by strtok() as an index
   //Serial.println('hello');
-  //Serial.println(inputBuffer);
+  Serial.println(inputBuffer);
 
   strtokIndx = strtok(inputBuffer,","); // get the first part
   Time = atof(strtokIndx); //  convert to an integer

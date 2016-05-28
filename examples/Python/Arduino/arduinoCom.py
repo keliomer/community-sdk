@@ -8,9 +8,20 @@ endMarker = 62
 
 
 def valToArduino(emoStateTuple):
-    sendStr = "%s,%s,%s, %s, %s,%s,%s, %s, %s,%s,%s, %s, %s,%s,%s" % emoStateTuple
+    '''Send data from Insight to Arduino
+    
+    Data in emoStateTuple is packaged into a string which is then sent
+    to the Arduino.
+    
+    Args:
+        emoStateTuple: tuple containing the current state of the Insight
+            Example emoStateTuple (using 
+    '''
+    print emoStateTuple
+    print len(emoStateTuple)
+    
+    sendStr = "%s,%s,%s, %s, %s,%s,%s, %s, %s,%s,%s, %s" % emoStateTuple
     print "SENDSTR %s" % (sendStr)
-    sendToArduino(sendStr)
 
 
 def setupSerial(serPort):
